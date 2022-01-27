@@ -60,5 +60,13 @@ describe("Thermostat", () => {
     thermostat.up()
     expect(thermostat.temperature).toEqual(32)
 })
+
+// You can reset the temperature to the default (20) reset method
+it('resets the temperature to default', () => {
+    const thermostat = new Thermostat()
+    thermostat.temperature = 25
+    thermostat.resetTemperature()
+    expect(thermostat.temperature).toEqual(20)
+  });
   
 });

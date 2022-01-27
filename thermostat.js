@@ -24,7 +24,13 @@ class Thermostat {
   setPowerSavingMode(value) {
    this.powerSaverMode = value
   }
+
+  resetTemperature() {
+    this.temperature = 20
+  }
 }
+
+
 
 module.exports = Thermostat;
 
