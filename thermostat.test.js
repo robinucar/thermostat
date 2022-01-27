@@ -68,5 +68,33 @@ it('resets the temperature to default', () => {
     thermostat.resetTemperature()
     expect(thermostat.temperature).toEqual(20)
   });
+
+  // You can ask about the thermostat's current energy usage: 
+  // 18 is low-usage, 
+  it('shows energy usage', () => {
+    const thermostat = new Thermostat()
+    thermostat.temperature = 17
+    expect(thermostat.getEnergyUsage()).toEqual('low')
+  });
+  
+  // <= 25 is medium-usage, 
+  it('shows energy usage', () => {
+    const thermostat = new Thermostat()
+    thermostat.temperature = 18
+    expect(thermostat.getEnergyUsage()).toEqual('medium')
+  });
+  
+  it('shows energy usage', () => {
+    const thermostat = new Thermostat()
+    thermostat.temperature = 25
+    expect(thermostat.getEnergyUsage()).toEqual('medium')
+  });
+  
+  // anything else is high-usage.
+  it('shows energy usage', () => {
+    const thermostat = new Thermostat()
+    thermostat.temperature = 26
+    expect(thermostat.getEnergyUsage()).toEqual('high')
+  });
   
 });

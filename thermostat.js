@@ -28,6 +28,17 @@ class Thermostat {
   resetTemperature() {
     this.temperature = 20
   }
+
+  getEnergyUsage() {
+    if (this.temperature < 18) {
+      return 'low'
+    } else if (this.temperature >= 18  && this.temperature <= 25) {
+      return 'medium'
+    } else {
+      return 'high'
+    }
+  }
+
 }
 
 
