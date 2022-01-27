@@ -7,13 +7,19 @@ class Thermostat {
   }
 
   up() {
-    this.temperature++
+    this.temperature++;
+  }
+
+  down() {
+    this.temperature--;
   }
 }
 
 module.exports = Thermostat;
 
-const t = new Thermostat()
+const t = new Thermostat();
+console.log(t);
+t.up();
 console.log(t)
-t.up()
-console.log(t)
+t.down()
+console.log(t);

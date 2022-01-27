@@ -13,4 +13,11 @@ describe("Thermostat", () => {
     thermostat.up()
     expect(thermostat.getTemperature()).toEqual(21)
   })
+
+   // You can decrease the temperature with a down method
+   it('decreases temp by 1', () => {
+    const thermostat = new Thermostat();
+    thermostat.down()
+    expect(thermostat.getTemperature()).toEqual(19)
+  });
 });
