@@ -1,3 +1,4 @@
+const Thermostat = require('./thermostat')
 describe('Thermostat', () => {
   
     // The Thermostat starts with an initial temperature of 20 degrees
