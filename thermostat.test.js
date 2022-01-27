@@ -35,5 +35,12 @@ describe("Thermostat", () => {
     const thermostat = new Thermostat()
     expect(thermostat.powerSaverMode).toEqual(true)
   });
+
+  it('can be turned off', () => { 
+    const thermostat = new Thermostat()
+    thermostat.setPowerSavingMode(false)
+    expect(thermostat.powerSaverMode).toEqual(false)
+  })
+  
   
 });
