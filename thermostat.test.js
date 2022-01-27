@@ -50,5 +50,15 @@ describe("Thermostat", () => {
     thermostat.up()
     expect(thermostat.getTemperature()).toEqual(25)
 })
+
+ // If power saving mode is off, the maximum temperature is 32 degrees
+ it('does not go above 32 degree if power saving mode is off', () => {
+    const thermostat = new Thermostat()
+    thermostat.setPowerSavingMode(false)
+    thermostat.temperature = 31
+    thermostat.up()
+    thermostat.up()
+    expect(thermostat.temperature).toEqual(32)
+})
   
 });
