@@ -29,5 +29,11 @@ describe("Thermostat", () => {
     thermostat.down()
     expect(thermostat.getTemperature()).toEqual(10)
   })
+
+  // The Power saving mode is on by default but it can also be turned off
+  it('power saving mode is on by default', () => {
+    const thermostat = new Thermostat()
+    expect(thermostat.powerSaverMode).toEqual(true)
+  });
   
 });
