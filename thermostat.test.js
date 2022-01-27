@@ -20,4 +20,14 @@ describe("Thermostat", () => {
     thermostat.down()
     expect(thermostat.getTemperature()).toEqual(19)
   });
+
+    // The minimum possible temperature is 10 degrees
+  it('does not go below 10', () => {
+    const thermostat = new Thermostat()
+    thermostat.temperature = 11
+    thermostat.down()
+    thermostat.down()
+    expect(thermostat.getTemperature()).toEqual(10)
+  })
+  
 });
