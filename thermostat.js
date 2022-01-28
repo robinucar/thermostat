@@ -41,3 +41,9 @@ class Thermostat {
 }
 
 module.exports = Thermostat;
+
+// const t = new Thermostat()
+// t.up()
+// t.up()
+
+// console.log(t.getTemperature())
