@@ -6,23 +6,19 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-
 const setUpTemperature = (thermostat) => {
-    
   rl.question(
-    "Please Enter a command to decrease or increase or exit the temperature ",
+    "Please Enter a command to decrease or increase or exit the temperature from ",
     (answer) => {
-      
       switch (answer) {
         case "up":
           thermostat.up();
-          
+
           break;
 
         case "down":
           thermostat.down();
 
-          
           break;
         case "exit":
           return rl.close();
@@ -31,10 +27,9 @@ const setUpTemperature = (thermostat) => {
       }
 
       setUpTemperature(thermostat);
-      console.log(thermostat.getTemperature())
     }
   );
+  console.log(thermostat.getTemperature());
 };
 
-setUpTemperature(thermostat = new Thermostat);
-
+setUpTemperature((thermostat = new Thermostat()));
